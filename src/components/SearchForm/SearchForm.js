@@ -9,11 +9,10 @@ const SearchForm = () => {
     const dispatch = useDispatch();
 
     const [phrase, setPhrase] = useState('');
-    console.log('phrase', phrase);
 
     const handleSubmit = e => {
         e.preventDefault();
-        dispatch({ type: 'UPDATE_SEARCHSTRING', payload: { phrase: phrase } });
+        dispatch({ type: 'UPDATE_SEARCHSTRING', payload: phrase });
         setPhrase('');
     };
 
