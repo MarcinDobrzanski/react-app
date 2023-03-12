@@ -1,0 +1,48 @@
+@import '../../styles/settings.scss';
+
+.nav {
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // right: 0;
+  background-color: darken($color-dark, 3%);
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  margin: 0 auto;
+}
+
+.link {
+  color: $color-light;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.icon {
+  font-size: 24px;
+  color: $color-light;
+  margin-right: 20px;
+}
+
+.list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  margin-left: 20px;
+  font-size: 24px;
+  color: $color-light;
+  text-decoration: none;
+}
