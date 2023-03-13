@@ -1,10 +1,14 @@
 import styles from './NavBar.module.scss';
 import Container from './../Container/Container';
+import PageTitle from '../PageTitle/PageTitle';
 
 const About = () => {
   return (
     <Container className={styles.container}>
-        <h2 className={styles.tittle}>About</h2>
+      <PageTitle>About</PageTitle>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+      </p>
     </Container>
   );
 };
