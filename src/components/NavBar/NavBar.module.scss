@@ -1,10 +1,6 @@
 @import '../../styles/settings.scss';
 
 .nav {
-  // position: fixed;
-  // top: 0;
-  // left: 0;
-  // right: 0;
   background-color: darken($color-dark, 3%);
 }
 
@@ -25,6 +21,7 @@
   color: $color-light;
   text-decoration: none;
   font-size: 24px;
+  font-weight: bold;
 }
 
 .icon {
@@ -43,6 +40,7 @@
 .item {
   margin-left: 20px;
   font-size: 24px;
+  font-weight: bold;
   color: $color-light;
   text-decoration: none;
 }
