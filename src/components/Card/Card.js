@@ -1,13 +1,15 @@
 import styles from './Card.module.scss';
 import { useDispatch } from 'react-redux';
 import clsx from 'clsx';
-import { toggleCardFavorite } from '../../redux/store'; // importuj akcję
+import { toggleCardFavorite } from '../../redux/store';
 
 const Card = props => {
   const dispatch = useDispatch();
 
+  console.log('Card props:', props);
+
   const handleToggleFavorite = () => {
-    dispatch(toggleCardFavorite(props.id)); // przekaż id karty do akcji
+    dispatch(toggleCardFavorite(props.id));
   };
 
   return (
@@ -17,7 +19,8 @@ const Card = props => {
         className={clsx(
           styles.icon,
           'fa',
-          props.isFavorite ? 'fa-star' : 'fa-star-o'
+          'fa-star-o',
+          props.isFavorite && styles.goldColor
         )}
         onClick={handleToggleFavorite}
       />
