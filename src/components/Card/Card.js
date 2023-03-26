@@ -6,8 +6,6 @@ import { toggleCardFavorite } from '../../redux/store';
 const Card = props => {
   const dispatch = useDispatch();
 
-  console.log('Card props:', props);
-
   const handleToggleFavorite = () => {
     dispatch(toggleCardFavorite(props.id));
   };
