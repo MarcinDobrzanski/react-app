@@ -3,6 +3,7 @@ import initialState from './initialState';
 import shortid from 'shortid';
 import strContains from '../utils/strContains'
 import listsReducer from './listsRedux'
+import columnsReducer from './columnsRedux'
 
 //selectors
 export const getFilteredCards = ({ cards, searchString }, columnId) => cards
@@ -21,15 +22,6 @@ export const addList = payload => ({ type: 'ADD_LIST', payload });
 export const updateSearchString = payload => ({ type: 'UPDATE_SEARCHSTRING', payload });
 export const toggleCardFavorite = payload => ({ type: 'TOGGLE_CARD_FAVORITE', payload });
 
-
-const columnsReducer = (statePart = [], action) => {
-  switch (action.type) {
-    case 'ADD_COLUMN':
-      return [...statePart, { ...action.payload, id: shortid() }];
-    default:
-      return statePart;
-  }
-}
 
 const cardsReducer = (statePart = [], action) => {
   switch (action.type) {
