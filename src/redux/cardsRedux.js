@@ -7,10 +7,11 @@ export const getFilteredCards = ({ cards, searchString }, columnId) => cards
 export const getFavoritesCards = state => state.cards.filter(card => card.isFavorite);
 
 // actions
-const createActionName = actionName => `app/card/${actionName}`;
+const createActionName = actionName => `app/cards/${actionName}`;
 const ADD_CARD = createActionName('ADD_CARD');
+export const toggleCardFavorite = payload => ({ type: 'TOGGLE_CARD_FAVORITE', payload });
 
-export const addCard = payload => ({ type: 'ADD_CARD', payload });
+export const addCard = payload => ({ type: ADD_CARD, payload });
 const cardsReducer = (statePart = [], action) => {
   switch (action.type) {
     case ADD_CARD:
