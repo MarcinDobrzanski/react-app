@@ -4,6 +4,7 @@ import strContains from '../utils/strContains'
 import listsReducer from './listsRedux'
 import columnsReducer from './columnsRedux'
 import cardsReducer from './cardsRedux'
+import searchStringReducer from './searchStringRedux'
 
 //selectors
 export const getFilteredCards = ({ cards, searchString }, columnId) => cards
@@ -22,14 +23,6 @@ export const addList = payload => ({ type: 'ADD_LIST', payload });
 export const updateSearchString = payload => ({ type: 'UPDATE_SEARCHSTRING', payload });
 export const toggleCardFavorite = payload => ({ type: 'TOGGLE_CARD_FAVORITE', payload });
 
-const searchStringReducer = (statePart = '', action) => {
-  switch (action.type) {
-    case 'UPDATE_SEARCHSTRING':
-      return action.payload
-    default:
-      return statePart;
-  }
-}
 
 const subreducers = {
   lists: listsReducer,
